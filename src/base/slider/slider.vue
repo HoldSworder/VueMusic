@@ -10,7 +10,7 @@
 </template>
 
 <script>
-  import BScroll from 'better-scroll'
+  // import BScroll from 'better-scroll'
 
   export default {
     props: {
@@ -27,19 +27,19 @@
         default: 4000
       }
     },
-    mounted: {
+    mounted() {
       setTimeout(() => {
         this._setSliderWidth()
         this._initSlider()
-      },20)
+      }, 20)
     },
     methodes: {
-      _setSliderWidth() {
-        this.children = this.$refs.sliderGroup.children
+      // _setSliderWidth() {
+      //   this.children = this.$refs.sliderGroup.children
 
-        let width = 0
-        let sliderWidth = this.$refs.slider.clientWidth
-      },
+      //   let width = 0
+      //   let sliderWidth = this.$refs.slider.clientWidth
+      // },
       _initSlider() {
 
       }
