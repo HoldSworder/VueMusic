@@ -1,6 +1,6 @@
 <template>
-  <div class="slider">
-    <div class="slider-group">
+  <div class="slider" ref="slider">
+    <div class="slider-group" ref="sliderGroup">
       <slot></slot>
     </div>
     <div class="dots">
@@ -10,7 +10,7 @@
 </template>
 
 <script>
-  // import BScroll from 'better-scroll'
+  import BScroll from 'better-scroll'
 
   export default {
     props: {
@@ -34,12 +34,12 @@
       }, 20)
     },
     methodes: {
-      // _setSliderWidth() {
-      //   this.children = this.$refs.sliderGroup.children
+      _setSliderWidth() {
+        this.children = this.$refs.sliderGroup.children
 
-      //   let width = 0
-      //   let sliderWidth = this.$refs.slider.clientWidth
-      // },
+        let width = 0
+        let sliderWidth = this.$refs.slider.clientWidth
+      },
       _initSlider() {
 
       }
