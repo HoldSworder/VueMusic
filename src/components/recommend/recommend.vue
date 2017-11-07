@@ -2,12 +2,10 @@
     <div class="recommend">
         <dev class="recommend-content">
             <div class="slider-wrapper">
-              <slider>
-                <div v-for="item in recommends">
+              <slider v-for="item in recommends" :key="item.id">
                   <a :href="item.linkUrl">
-                    <img :src="item.picUrl">
+                    <img :src="item.picUrl" class='sliderImg'>
                   </a>
-                </div>
               </slider>
             </div>
             <div class="recommend-list">
@@ -98,4 +96,5 @@
         width: 100%
         top: 50%
         transform: translateY(-50%)
+    
 </style>
